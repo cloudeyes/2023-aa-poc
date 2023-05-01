@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation project(':engine-core')
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': ''
+    }
+}

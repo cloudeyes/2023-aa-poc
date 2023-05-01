@@ -1,0 +1,3 @@
+include ':engine-core'
+include ':plugin-sample1'
+include ':plugin-sample2'
