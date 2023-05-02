@@ -12,7 +12,7 @@ Operation Report 의 템플릿을 사용자 입맛에 맞게 Customizing 하고 
 ## 실행 방법
 
 ```
-python ReportGeneratorPoc [html|markdown]
+python3 ReportGeneratorPoc.py [html|markdown]
 ```
 
 ## 실행 예제
