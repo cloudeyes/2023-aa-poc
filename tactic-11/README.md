@@ -1,4 +1,4 @@
-# Tactic 11 - Apply Visitor Pattern for Report Types
+# Tactic 11 - Applying Visitor Pattern for Report Types
 
 ## 소개
 
