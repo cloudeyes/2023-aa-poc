@@ -9,6 +9,10 @@ gradle build
 java -jar ./build/libs/tatic-04.jar
 ```
 
+### 실행 결과
+
+![](images/screenshot-01.png)
+
 ## 빌드 아티팩트
 
 ```
