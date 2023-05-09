@@ -66,7 +66,7 @@ class Section(Renderable):
         return renderer.renderList(self)
 
 
-class Body(Renderable):
+class Document(Renderable):
     def __init__(self, *items: list[Renderable]):
         self.items = list(items)
 
@@ -98,6 +98,21 @@ class Section(Renderable):
         for c in self.content:
             output += c.accept(renderer)
         return output
+
+
+report_plugin = plugin_manager.get_report_plugin()
+renderer = report_plugin.get_renderer(format_type)
+anomaly_report = get_anomaly_report(anomaly_session, report_template)
+# Document(
+#    Header("Anomaly Remedy Report"),
+#    Section(
+#        "Introduction",
+#        Paragraph("This report summarizes ... "),
+#    ),
+#    ...,
+# )
+
+output = anomaly_report.accept(renderer)
 
 
 class MarkdownRenderer(Renderer):
@@ -141,7 +156,7 @@ def main():
 
     # Create the report structure using composite pattern
     format_type = sys.argv[1]
-    anomaly_report = Body(
+    anomaly_report = Document(
         Header("Anomaly Remedy Report"),
         Section(
             "Introduction",
